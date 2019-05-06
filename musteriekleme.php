@@ -1,4 +1,4 @@
-if(isset($_POST['cari_ekle_is'])){
+if(isset($_POST['cari_ekle'])){
 	
 	$cari_firma = tr_strtoupper($_POST['cari_firma']); 
 	$cari_mail = $_POST['cari_mail'];
@@ -54,10 +54,10 @@ if(isset($_POST['cari_ekle_is'])){
 	));
 	
 	if($insert){
-		header('Location:is-ekle.php?durum=cariok');
+		header('Location:cari.php?durum=ok');
 		exit;
 	}else{
-		header('Location:is-ekle.php?durum=carino');
+		header('Location:cari.php?durum=no');
 		exit;
 	}
 	
